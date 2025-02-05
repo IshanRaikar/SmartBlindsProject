@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from SmartBlindsProjectApp import views
+from SmartBlindsProjectApp.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomeView.as_view(), name='homeView'),
 ]
